@@ -1,1 +1,1 @@
-web: bundle exec puma -C bin/sendtweet.rb
+ruby bin/sendtweet.rb
