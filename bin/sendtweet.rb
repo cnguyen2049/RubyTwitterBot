@@ -2,9 +2,12 @@ require 'rubygems'
 require 'oauth'
 require 'json'
 require './bin/getquote'
+require 'logger'
 
 
 def TwitterBot()
+  logger = Logger.new(STDOUT)
+  logger.info("Program started")
   # You will need to set your application type to
   # read/write on dev.twitter.com and regenerate your access
   # token.  Enter the new values here:
@@ -49,9 +52,11 @@ def TwitterBot()
   if response.code == '200' then
     tweet = JSON.parse(response.body)
     puts "Successfully sent #{tweet["text"]}"
+    logger.info("Executed")
   else
     puts "Could not send the Tweet! " +
     "Code:#{response.code} Body:#{response.body}"
+    logger.info("Failed")
     TwitterBot()
 
   end
