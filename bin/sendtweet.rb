@@ -1,7 +1,7 @@
 require 'rubygems'
 require 'oauth'
 require 'json'
-require './getquote'
+require './bin/getquote'
 
 
 def TwitterBot()
