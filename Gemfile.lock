@@ -1,13 +1,13 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    oauth (0.5.4)
+    oauth (0.5.5)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  oauth (~> 0.5.1)
+  oauth (~> 0.5.5)
 
 RUBY VERSION
    ruby 2.6.3p62
